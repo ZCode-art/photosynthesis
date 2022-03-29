@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#beforegame h3{
+    text-align: center;
+}
+
+#beforegame div {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+#beforegame div button {
+    display: inline-block;
+    height: 6vh;
+    width: 14vh;
+    border-radius: 3vh;
+    background-color: #194;
+}
+.avatars, .order-avatars {
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+    width: 90vw;
+    margin: 1vh auto;
+}
+.avatars > div {
+    flex: 1;
+    height: 16vh;
+    width: 16vh;
+}
+.order-avatars > div {
+    flex: 1;
+    height: 16vh;
+    width: 16vh;
+}
+
+div img {
+    height: 100%;
+}
+
+#game {
+    display: flex;
+}
+
+#app {
+    position: relative;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 89vh;
+    background-color: #fff;
+    border: 1px solid #000;
+    /* background-image: linear-gradient(to bottom right, yellow, #666); */
+}
+
+#out {
+    flex:1;
+}
+
+#app div {
+    position: absolute;
+    box-sizing: border-box;
+    /*height: 100px;
+    width: 100px;*/
+    height: 14.28vh;
+    width: 14.28vh;
+    /*background-color: #0f0;*/
+    border-radius: 50%;
+    border:1px solid #000;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+#app button{
+    z-index: 1;
+}
+
+#app > div > div {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 50%;
+    top:50%;
+    left:50%;
+    margin-top:-5vh;
+    margin-left:-5vh;
+}
+
+#app div[class^="one"] {
+    background-image: url(img/heart_hollow.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: 50%;
+}
+
+#app div[class^="two"] {
+    background-image: url(img/heart_hollow.png);
+    /*background-position:center;*/
+    background-position: 7vh 4vh;
+    background-repeat:repeat-x;
+    background-size: 50%;
+}
+#app div[class^="three"] {
+    background-image: url(img/heart_hollow.png);
+    /*background-position:center;*/
+    background-position: 4.8vh 5vh;
+    background-repeat:repeat-x;
+    background-size: 33%;
+}
+#app div[class^="four"] {
+    background-image: url(img/heart_hollow.png);
+    /*background-position:center;*/
+    background-position: 1vh 7.4vh;
+    background-repeat:repeat;
+    background-size: 43%;
+}
+
+#app .one-0{
+    left: 37.1vh;
+    top: 0vh;
+}
+#app .one-1{
+    left: 24.73vh;
+    top: 7.14vh;
+}
+#app .one-2{
+    left: 12.37vh;
+    top: 14.28vh;
+}
+#app .one-3{
+    left: 0vh;
+    top: 21.42vh;
+}
+#app .one-4{
+    left: 0vh;
+    top: 35.70vh;
+}
+#app .one-5{
+    left: 0vh;
+    top: 49.98vh;
+}
+#app .one-6{
+    left: 0vh;
+    top: 64.26vh;
+}
+#app .one-7{
+    left: 12.37vh;
+    top: 71.40vh;
+}
+#app .one-8{
+    left: 24.73vh;
+    top: 78.54vh;
+}
+#app .one-9{
+    left: 37.1vh;
+    top: 85.68vh;
+}
+#app .one-10{
+    left: 49.47vh;
+    top: 78.54vh;
+}
+#app .one-11{
+    left: 61.83vh;
+    top: 71.40vh;
+}
+#app .one-12{
+    left: 74.2vh;
+    top: 64.26vh;
+}
+#app .one-13{
+    left: 74.2vh;
+    top: 49.98vh;
+}
+#app .one-14{
+    left: 74.2vh;
+    top: 35.70vh;
+}
+#app .one-15{
+    left: 74.2vh;
+    top: 21.42vh;
+}
+#app .one-16{
+    left: 61.83vh;
+    top: 14.28vh;
+}
+#app .one-17{
+    left: 49.47vh;
+    top: 7.14vh;
+}
+
+#app .two-0{
+    left: 37.1vh;
+    top: 14.28vh;
+}
+#app .two-1{
+    left: 24.73vh;
+    top: 21.42vh;
+}
+#app .two-2{
+    left: 12.37vh;
+    top: 28.56vh;
+}
+#app .two-3{
+    left: 12.37vh;
+    top: 42.70vh;
+}
+#app .two-4{
+    left: 12.37vh;
+    top: 56.98vh;
+}
+#app .two-5{
+    left: 24.73vh;
+    top: 64.26vh;
+}
+#app .two-6{
+    left: 37.1vh;
+    top: 71.40vh;
+}
+#app .two-7{
+    left: 49.47vh;
+    top: 64.26vh;
+}
+#app .two-8{
+    left: 61.83vh;
+    top: 56.98vh;
+}
+#app .two-9{
+    left: 61.83vh;
+    top: 42.70vh;
+}
+#app .two-10{
+    left: 61.83vh;
+    top: 28.56vh;
+}
+#app .two-11{
+    left: 49.47vh;
+    top: 21.42vh;
+}
+#app .three-0{
+    left: 37.1vh;
+    top: 28.56vh;
+}
+#app .three-1{
+    left: 24.73vh;
+    top: 35.70vh;
+}
+#app .three-2{
+    left: 24.73vh;
+    top: 49.98vh;
+}
+#app .three-3{
+    left: 37.1vh;
+    top: 57.12vh;
+}
+#app .three-4{
+    left: 49.47vh;
+    top: 49.98vh;
+}
+#app .three-5{
+    left: 49.47vh;
+    top: 35.70vh;
+}
+#app .four-0{
+    left: 37.1vh;
+    top: 42.84vh;
+}
+
+.photosynthesis table{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.photosynthesis table div{
+    height: 14vh;
+    width: 14vh;
+}
+.photosynthesis table td{
+    padding: 1vh;
+}
+.user-info{
+    display: flex;
+}
+.user-info div {
+    margin: 0 1vh;
+    height: 16vh;
+    width: 16vh;
+}
+.user-info div:last-child {
+    flex:1;
+}
+.free-tree {
+    background-color: #666;
+}
+
+.free-tree, .unfree-tree {
+    display: flex;
+    justify-content: space-around;
+    height: 40vh;
+    background-color: #888;
+}
+.free-tree > div {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.free-tree > div > div {
+    position: relative;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.unfree-tree > div {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.unfree-tree > div > div {
+    position: relative;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.unfree-tree > div > p {
+    margin-left: 1vh;
+}
+
+.seed-mat {
+    height: 10vh;
+    width: 10vh;
+}
+
+.smalltree-mat {
+    height: 10vh;
+    width: 10vh;
+}
+
+.mediumtree-mat {
+    height: 13vh;
+    width: 13vh;
+}
+
+.bigtree-mat {
+    height: 18vh;
+    width: 18vh;
+}
+.free-tree > div > div > div {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 50%;
+    top:50%;
+    left:50%;
+    margin-top:-5vh;
+    margin-left:-5vh;
+}
+.unfree-tree > div > div > div {
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 50%;
+    top:50%;
+    left:50%;
+    margin-top:-5vh;
+    margin-left:-5vh;
+}
+
+.lost { 
+    display: flex;
+    height: 22vh;
+    flex-flow: row;
+    justify-content: space-around;
+    background-color: #888;
+}
+
+.lost div{
+    position: relative;
+    height: 10vh;
+    width: 10vh;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.lost > div > div{
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 50%;
+    top:50%;
+    left:50%;
+    margin-top:-5vh;
+    margin-left:-5vh;
+}
+/* .seed{
+    background-image: url(img/seed.png);    
+}
+.smalltree{
+    background-image: url(img/tree1.png);
+}
+.mediumtree{
+    background-image: url(img/tree222.png);
+}
+.bigtree{
+    background-image: url(img/tree3.png);
+} */

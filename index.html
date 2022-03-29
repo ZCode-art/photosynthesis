@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" >
+    <title>光合作用</title>
+</head>
+<body>
+<div id="beforegame">
+    <h3>选择2-4位玩家</h3>
+    <div class="avatars">
+        <div><img src="img/wy.jpg" onclick="onclickavatar(0)"/></div>
+        <div><img src="img/sq.jpg" onclick="onclickavatar(1)"/></div>
+        <div><img src="img/zc.jpg" onclick="onclickavatar(2)"/></div>
+        <div><img src="img/fy.jpg" onclick="onclickavatar(3)"/></div>
+        <div><img src="img/yf.jpg" onclick="onclickavatar(4)"/></div>
+    </div>
+    <div><button onclick="onclickbegin()">开始游戏</button></div>
+    <div class="order-avatars">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<div id="game">
+    <div id="app">
+        <div class="one-0"></div>
+        <div class="one-1"></div>
+        <div class="one-2"></div>
+        <div class="one-3"></div>
+        <div class="one-4"></div>
+        <div class="one-5"></div>
+        <div class="one-6"></div>
+        <div class="one-7"></div>
+        <div class="one-8"></div>
+        <div class="one-9"></div>
+        <div class="one-10"></div>
+        <div class="one-11"></div>
+        <div class="one-12"></div>
+        <div class="one-13"></div>
+        <div class="one-14"></div>
+        <div class="one-15"></div>
+        <div class="one-16"></div>
+        <div class="one-17"></div>
+        <div class="two-0"></div>
+        <div class="two-1"></div>
+        <div class="two-2"></div>
+        <div class="two-3"></div>
+        <div class="two-4"></div>
+        <div class="two-5"></div>
+        <div class="two-6"></div>
+        <div class="two-7"></div>
+        <div class="two-8"></div>
+        <div class="two-9"></div>
+        <div class="two-10"></div>
+        <div class="two-11"></div>
+        <div class="three-0"></div>
+        <div class="three-1"></div>
+        <div class="three-2"></div>
+        <div class="three-3"></div>
+        <div class="three-4"></div>
+        <div class="three-5"></div>
+        <div class="four-0"></div>      
+    </div>
+    <div id="out">
+        <div class="photosynthesis">
+            <table>
+                <tbody>
+                <tr>
+                    <td>头像</td>
+                    <td><div class="tablediv">
+                        <!-- <img src="img/zc.jpg"/> -->
+                        </div>
+                    </td>
+                    <td><div class="tablediv"></div></td>
+                    <td><div class="tablediv"></div></td>
+                    <td><div class="tablediv"></div></td>
+                </tr>
+                <tr>
+                    <td>获得阳光值</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="totalvalues">
+                    <td>总阳光值</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="totalscores">
+                    <td>总得分</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <div><button onclick="gamemain2()">继续</button></div>
+        </div>
+        <div class="player0">
+            <div class="user-info">
+                <div>
+                    <!-- <img src="img/zc.jpg"/> -->
+                </div>
+                <div>
+                    <p><span>阳光值:<b>0</b></span></p>
+                    <p><span>砍大树得分:<b>0</b></span></p>
+                    <button class="endround" onclick="endround(0)">回合结束</button>
+                </div>
+                <div><p class="print"></p></div>
+            </div>
+            <h5>已解锁（消耗阳光值----播种：1，种子升小树：1，小树升中树：2，中树升大树：3，收割：4）</h5>
+            <div class="free-tree">
+                <div class="seed-area">
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                </div>
+                <div class="seed-area">
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"></div>
+                    <div class="mediumtree-mat"></div>
+                    <div class="mediumtree-mat"></div>
+                </div>
+                <div class="bigtree-area">
+                    <div class="bigtree-mat"></div>
+                    <div class="bigtree-mat"></div>
+                </div>
+            </div>
+            <h5>未解锁（从下往上解锁，右边是需要的阳光值）</h5>
+            <div class="unfree-tree">
+                <div class="seed-area">
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                </div>
+                <div class="seed-p">
+                    <p>2</p>
+                    <p>2</p>
+                    <p>1</p>
+                    <p>1</p>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                </div>
+                <div class="smalltree-p">
+                    <p>3</p>
+                    <p>3</p>
+                    <p>2</p>
+                    <p>2</p>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                </div>
+                <div class="mediumtree-p">
+                    <p>4</p>
+                    <p>3</p>
+                    <p>3</p>
+                </div>
+                <div class="bigtree-area">
+                    <div class="bigtree-mat"><div class="bigtree"></div></div>
+                    <div class="bigtree-mat"><div class="bigtree"></div></div>
+                </div>
+                <div class="bigtree-p">
+                    <p>5</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <h5>已丢弃</h5>
+            <div class="lost"></div>
+        </div>
+        <div class="player1">
+            <div class="user-info">
+                <div>
+                    <!-- <img src="img/zc.jpg"/> -->
+                </div>
+                <div>
+                    <p><span>阳光值:<b>0</b></span></p>
+                    <p><span>砍大树得分:<b>0</b></span></p>
+                    <button class="endround" onclick="endround(1)">回合结束</button>
+                </div>
+                <div><p class="print"></p></div>
+            </div>
+            <h5>已解锁（消耗阳光值----播种：1，种子升小树：1，小树升中树：2，中树升大树：3，收割：4）</h5>
+            <div class="free-tree">
+                <div class="seed-area">
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                </div>
+                <div class="seed-area">
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"></div>
+                    <div class="mediumtree-mat"></div>
+                    <div class="mediumtree-mat"></div>
+                </div>
+                <div class="bigtree-area">
+                    <div class="bigtree-mat"></div>
+                    <div class="bigtree-mat"></div>
+                </div>
+            </div>
+            <h5>未解锁（从下往上解锁，右边是需要的阳光值）</h5>
+            <div class="unfree-tree">
+                <div class="seed-area">
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                </div>
+                <div class="seed-p">
+                    <p>2</p>
+                    <p>2</p>
+                    <p>1</p>
+                    <p>1</p>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                </div>
+                <div class="smalltree-area">
+                    <p>3</p>
+                    <p>3</p>
+                    <p>2</p>
+                    <p>2</p>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                </div>
+                <div class="mediumtree-area">
+                    <p>4</p>
+                    <p>3</p>
+                    <p>3</p>
+                </div>
+                <div class="bigtree-area">
+                    <div class="bigtree-mat"><div class="bigtree"></div></div>
+                    <div class="bigtree-mat"><div class="bigtree"></div></div>
+                </div>
+                <div class="bigtree-p">
+                    <p>5</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <h5>已丢弃</h5>
+            <div class="lost"></div>
+        </div>
+        <div class="player2">
+            <div class="user-info">
+                <div>
+                    <!-- <img src="img/zc.jpg"/> -->
+                </div>
+                <div>
+                    <p><span>阳光值:<b>0</b></span></p>
+                    <p><span>砍大树得分:<b>0</b></span></p>
+                    <button class="endround" onclick="endround(2)">回合结束</button>
+                </div>
+                <div><p class="print"></p></div>
+            </div>
+            <h5>已解锁（消耗阳光值----播种：1，种子升小树：1，小树升中树：2，中树升大树：3，收割：4）</h5>
+            <div class="free-tree">
+                <div class="seed-area">
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                </div>
+                <div class="seed-area">
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"></div>
+                    <div class="mediumtree-mat"></div>
+                    <div class="mediumtree-mat"></div>
+                </div>
+                <div class="bigtree-area">
+                    <div class="bigtree-mat"></div>
+                    <div class="bigtree-mat"></div>
+                </div>
+            </div>
+            <h5>未解锁（从下往上解锁，右边是需要的阳光值）</h5>
+            <div class="unfree-tree">
+                <div class="seed-area">
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                </div>
+                <div class="seed-p">
+                    <p>2</p>
+                    <p>2</p>
+                    <p>1</p>
+                    <p>1</p>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                </div>
+                <div class="smalltree-p">
+                    <p>3</p>
+                    <p>3</p>
+                    <p>2</p>
+                    <p>2</p>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                </div>
+                <div class="mediumtree-p">
+                    <p>4</p>
+                    <p>3</p>
+                    <p>3</p>
+                </div>
+                <div class="bigtree-area">
+                    <div class="bigtree-mat"><div class="bigtree"></div></div>
+                    <div class="bigtree-mat"><div class="bigtree"></div></div>
+                </div>
+                <div class="bigtree-p">
+                    <p>5</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <h5>已丢弃</h5>
+            <div class="lost"></div>
+        </div>
+        <div class="player3">
+            <div class="user-info">
+                <div>
+                    <!-- <img src="img/zc.jpg"/> -->
+                </div>
+                <div>
+                    <p><span>阳光值:<b>0</b></span></p>
+                    <p><span>砍大树得分:<b>0</b></span></p>
+                    <button class="endround" onclick="endround(3)">回合结束</button>
+                </div>
+                <div><p class="print"></p></div>
+            </div>
+            <h5>已解锁（消耗阳光值----播种：1，种子升小树：1，小树升中树：2，中树升大树：3，收割：4）</h5>
+            <div class="free-tree">
+                <div class="seed-area">
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                </div>
+                <div class="seed-area">
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                    <div class="seed-mat"></div>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                    <div class="smalltree-mat"></div>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"></div>
+                    <div class="mediumtree-mat"></div>
+                    <div class="mediumtree-mat"></div>
+                </div>
+                <div class="bigtree-area">
+                    <div class="bigtree-mat"></div>
+                    <div class="bigtree-mat"></div>
+                </div>
+            </div>
+            <h5>未解锁（从下往上解锁，右边是需要的阳光值）</h5>
+            <div class="unfree-tree">
+                <div class="seed-area">
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                    <div class="seed-mat"><div class="seed"></div></div>
+                </div>
+                <div class="seed-p">
+                    <p>2</p>
+                    <p>2</p>
+                    <p>1</p>
+                    <p>1</p>
+                </div>
+                <div class="smalltree-area">
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                    <div class="smalltree-mat"><div class="smalltree"></div></div>
+                </div>
+                <div class="smalltree-p">
+                    <p>3</p>
+                    <p>3</p>
+                    <p>2</p>
+                    <p>2</p>
+                </div>
+                <div class="mediumtree-area">
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                    <div class="mediumtree-mat"><div class="mediumtree"></div></div>
+                </div>
+                <div class="mediumtree-p">
+                    <p>4</p>
+                    <p>3</p>
+                    <p>3</p>
+                </div>
+                <div class="bigtree-area">
+                    <div class="bigtree-mat"><div class="bigtree"></div></div>
+                    <div class="bigtree-mat"><div class="bigtree"></div></div>
+                </div>
+                <div class="bigtree-p">
+                    <p>5</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <h5>已丢弃</h5>
+            <div class="lost"></div>
+        </div>
+    </div>
+    
+</div>
+<script src="script.js"></script>
+</body>
+</html>
